@@ -116,7 +116,7 @@ class BabaNounBlock(BaseBlock):
         self.moveable = True
 
 
-class StoneNounBlock(BaseBlock):
+class RockNounBlock(BaseBlock):
     def __init__(self, id: str,text: bool, moveable: bool, controllable: bool, location: Vector2, texture: str,
                  word: str):
         super().__init__(id, text, moveable, controllable, location, texture)
@@ -135,6 +135,22 @@ class WallNounBlock(BaseBlock):
 
 
 class FlagNounBlock(BaseBlock):
+    def __init__(self, id: str,text: bool, moveable: bool, controllable: bool, location: Vector2, texture: str,
+                 word: str):
+        super().__init__(id, text, moveable, controllable, location, texture)
+        self.word = word
+        self._controllable = False
+        self.moveable = True
+
+class SkullNounBlock(BaseBlock):
+    def __init__(self, id: str,text: bool, moveable: bool, controllable: bool, location: Vector2, texture: str,
+                 word: str):
+        super().__init__(id, text, moveable, controllable, location, texture)
+        self.word = word
+        self._controllable = False
+        self.moveable = True
+
+class LavaNounBlock(BaseBlock):
     def __init__(self, id: str,text: bool, moveable: bool, controllable: bool, location: Vector2, texture: str,
                  word: str):
         super().__init__(id, text, moveable, controllable, location, texture)
